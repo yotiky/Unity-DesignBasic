@@ -33,7 +33,7 @@ namespace Sample1
             return new Deck()
             {
                 Name = "Deck name",
-                Cards = new string[0],
+                Cards = new string[] { "Card1", "Card2", "Card3" },
             };
         }
 

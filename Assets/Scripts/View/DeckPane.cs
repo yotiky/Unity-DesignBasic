@@ -34,7 +34,8 @@ namespace Sample1
             deckNameText.text = deck.Name;
             foreach (var card in deck.Cards)
             {
-                Instantiate(cardPrefab, cardContainer.transform);
+                var go = Instantiate(cardPrefab, cardContainer.transform);
+                go.name = card;
             }
 
             renameButton.OnClickAsObservable()
@@ -58,5 +59,9 @@ namespace Sample1
         {
             return UniTask.CompletedTask;
         }
+
+        public void Show() => gameObject.SetActive(true);
+        public void Hide() => gameObject.SetActive(false);
+
     }
 }

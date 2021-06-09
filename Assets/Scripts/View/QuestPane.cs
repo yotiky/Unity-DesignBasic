@@ -11,7 +11,7 @@ namespace Sample1
     public class QuestPane : MonoBehaviour
     {
         [SerializeField] private Button startLatestButton;
-        [SerializeField] private Button palyStoryButton;
+        [SerializeField] private Button playStoryButton;
 
         private Network network;
 
@@ -35,7 +35,7 @@ namespace Sample1
                 })
                 .AddTo(this);
 
-            palyStoryButton.OnClickAsObservable()
+            playStoryButton.OnClickAsObservable()
                 .Subscribe(_ =>
                 {
                     // クリック時の処理
@@ -48,5 +48,8 @@ namespace Sample1
         {
             return UniTask.CompletedTask;
         }
+
+        public void Show() => gameObject.SetActive(true);
+        public void Hide() => gameObject.SetActive(false);
     }
 }

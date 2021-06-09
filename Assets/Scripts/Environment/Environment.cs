@@ -16,12 +16,10 @@ namespace Sample1
         {
             await stage.Initialize();
 
-            var bgm = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            bgm.name = "BGM";
+            var bgm = new GameObject("BGM");
             DontDestroyOnLoad(bgm);
 
-            var se = GameObject.CreatePrimitive(PrimitiveType.Cube);
-            se.name = "SE";
+            var se = new GameObject("SE");
             DontDestroyOnLoad(se);
         }
 

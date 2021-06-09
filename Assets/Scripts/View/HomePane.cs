@@ -54,5 +54,8 @@ namespace Sample1
         {
             return UniTask.CompletedTask;
         }
+
+        public void Show() => gameObject.SetActive(true);
+        public void Hide() => gameObject.SetActive(false);
     }
 }
